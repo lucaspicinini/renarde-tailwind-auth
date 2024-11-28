@@ -1,0 +1,12 @@
+<input
+ datepicker
+ name="{name}"
+ class="{class ?: ''}"
+ id="{id ?: ''}"
+ required="{required ?: ''}"
+ type="{type ?: 'text'}"
+ placeholder="{placeholder ?: ''}"
+ aria-describedby="{aria-describedby ?: ''}"
+ {#ifError name}disabled{/ifError}
+ maxlength="{maxlength ?: ''}"
+ value="{inject:flash.get(name)}"/>

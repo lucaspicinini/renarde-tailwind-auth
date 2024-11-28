@@ -1,0 +1,10 @@
+<div class="inline-block w-1/2">
+  <label class="{class ?: ''}" for="{name}">{label}</label>
+  {nested-content}
+  {#ifError name}
+  <p id="filled_error_help" class="mt-2 text-xs text-red-600 dark:text-red-400">
+    <span class="font-medium text-lg">Ooops! </span>
+    <span class="text-lg">{#error name/}</span>
+  </p>
+  {/ifError}
+</div>

@@ -1,0 +1,10 @@
+<input
+ name="{name}"
+ class="{class ?: ''}"
+ id="{id ?: ''}"
+ {#if required??}required{/if}
+ type="{type ?: 'text'}"
+ placeholder="{placeholder ?: ''}"
+ aria-describedby="{aria-describedby ?: ''}"
+ maxlength="{maxlength ?: ''}"
+ value="{inject:flash.get(name)}"/>

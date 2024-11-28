@@ -1,0 +1,18 @@
+{
+  "name": "renarde-tailwind-auth",
+  "version": "1.0.0",
+  "description": "This project uses Quarkus, the Supersonic Subatomic Java Framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tw-watch": "npm install; npx tailwindcss -i ./src/main/resources/web/app/input.css -o ./src/main/resources/web/app/app.scss --watch;",
+    "tw-build": "npm install; npx tailwindcss -i ./src/main/resources/web/app/input.css -o ./src/main/resources/web/app/app.scss;"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "flowbite": "^2.5.2",
+    "tailwindcss": "^3.4.13"
+  }
+}
