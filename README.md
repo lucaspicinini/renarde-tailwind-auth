@@ -1,86 +1,66 @@
-# renarde-tailwind-auth
+# 🦊 Renarde Tailwind Auth
 
-This project uses Quarkus, the Supersonic Subatomic Java Framework.
+![Home](src/main/resources/repo/home.png)
 
-If you want to learn more about Quarkus, please visit its website: <https://quarkus.io/>.
+Inspirado naqueles que priorizam *delivering over firula*, mas que não permitem
+que suas entregas percam a qualidade por causa disso. O Renarde Tailwind Auth é
+um scaffolding para agilizar projetos [**Quarkus MVC**](https://quarkus.io/guides/web).
 
-## Running the application in dev mode
+A arquitetura clássica ainda é muito eficiente para resolver uma gama enorme de problemas
+e vai nos acompanhar por muito tempo. A vida não é feita de microserviços e cloud não é mesmo meus jovens?!
 
-You can run your application in dev mode that enables live coding using:
+💀💀😭😭
 
-```shell script
-./mvnw compile quarkus:dev
-```
+Nesse repositório, você encontra um scaffolding básico para autenticação em
+uma aplicação Quarkus MVC. Com poucos comandos, você já estará com a implementação
+básica da autenticação do Renarde.
 
-> **_NOTE:_**  Quarkus now ships with a Dev UI, which is available in dev mode only at <http://localhost:8080/q/dev/>.
+## Uma visão geral do starter kit
 
-## Packaging and running the application
+### Flowbite e Tailwind *ready to use*
 
-The application can be packaged using:
+Uma biblioteca gratuita e com todos os componentes [**Tailwind**](https://tailwindcss.com/docs/installation)
+que você vai precisar. Tudo ao alcance de um CTRL+C, CTRL+V.
 
-```shell script
-./mvnw package
-```
+> **_Componentes:_**  <https://flowbite.com/blocks/>
 
-It produces the `quarkus-run.jar` file in the `target/quarkus-app/` directory.
-Be aware that it’s not an _über-jar_ as the dependencies are copied into the `target/quarkus-app/lib/` directory.
+### Cadastro, Login e Dashboard 🤩🤩🤩
 
-The application is now runnable using `java -jar target/quarkus-app/quarkus-run.jar`.
+Utilizando a implementação básica do [**Renarde**](https://docs.quarkiverse.io/quarkus-renarde/dev/security.html),
+o framework do [**Quarkus**](https://quarkus.io/guides) para projetos MVC,
+você já começa com seus templates de cadastro, login e logout prontos! Como se não bastasse,
+você também ganha um bom modelo de dashboard para o usuário logado, tendo um esqueleto perfeito
+para começar a focar no que realmente importa.
 
-If you want to build an _über-jar_, execute the following command:
+![Home](src/main/resources/repo/register.png)
 
-```shell script
-./mvnw package -Dquarkus.package.jar.type=uber-jar
-```
+![Home](src/main/resources/repo/login.png)
 
-The application, packaged as an _über-jar_, is now runnable using `java -jar target/*-runner.jar`.
+![Home](src/main/resources/repo/dashboard.png)
 
-## Creating a native executable
+## Instalando
 
-You can create a native executable using:
-
-```shell script
-./mvnw package -Dnative
-```
-
-Or, if you don't have GraalVM installed, you can run the native executable build in a container using:
+Clone o repo:
 
 ```shell script
-./mvnw package -Dnative -Dquarkus.native.container-build=true
+git clone https://github.com/lucaspicinini/renarde-tailwind-auth.git
 ```
 
-You can then execute your native executable with: `./target/renarde-tailwind-auth-1.0.0-SNAPSHOT-runner`
+Entre na pasta:
 
-If you want to learn more about building native executables, please consult <https://quarkus.io/guides/maven-tooling>.
+```shell script
+cd renarde-tailwind-auth
+```
 
-## Related Guides
+Instale o Tailwind e o Flowbite:
 
-- Hibernate ORM with Panache ([guide](https://quarkus.io/guides/hibernate-orm-panache)): Simplify your persistence code for Hibernate ORM via the active record or the repository pattern
-- JDBC Driver - MySQL ([guide](https://quarkus.io/guides/datasource)): Connect to the MySQL database via JDBC
-- Renarde ([guide](https://quarkiverse.github.io/quarkiverse-docs/quarkus-renarde/dev/index.html)): Renarde is a server-side Web Framework based on Quarkus, Qute, Hibernate and RESTEasy Reactive.
-- Web Bundler ([guide](https://docs.quarkiverse.io/quarkus-web-bundler/dev/)): Creating full-stack Web Apps is fast and simple with this extension. Zero config bundling for your web-app scripts (js, jsx, ts, tsx), dependencies (jquery, react, htmx, ...) and styles (css, scss, sass).
+```shell script
+npm install
+```
 
-## Provided Code
+> Edite suas configurações de banco de dados no arquivo application.properties
 
-### Hibernate ORM
-
-Create your first JPA entity
-
-[Related guide section...](https://quarkus.io/guides/hibernate-orm)
-
-[Related Hibernate with Panache section...](https://quarkus.io/guides/hibernate-orm-panache)
-
-
-### Renarde
-
-This is a small Renarde webapp
-
-[Related guide section...](https://quarkiverse.github.io/quarkiverse-docs/quarkus-renarde/dev/index.html)
-
-
-### Web Bundler
-
-This is a tiny app `web-bundler.html` to get started with the Web Bundler. Once the quarkus app is started visit the generated page at http://localhost:8080/web-bundler.html
-
-[Related guide section...](https://docs.quarkiverse.io/quarkus-web-bundler/dev/)
-
+Pronto! Agora você pode rodar o projeto com o comando `quarkus dev`.
+Em seguida, abra outra aba do terminal, vá ao diretório do projeto novamente e execute
+o comando `npm run tw-watch`. Dessa forma, seu projeto vai recompilar o
+frontend automaticamente a cada alteração.
