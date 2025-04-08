@@ -46,3 +46,4 @@ nb-configuration.xml
 
 # Web Bundler
 node_modules/
+src/main/resources/web/app/app.scss
